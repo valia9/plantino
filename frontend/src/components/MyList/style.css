@@ -1,0 +1,15 @@
+.form {
+    position: absolute;
+    top: 0;
+    background-color: #ECFDD8;
+    min-width: 22rem;
+    min-height: 23rem;
+    text-align: center;
+    padding: 2rem 2rem;
+    left: 50%;
+    transform: translateX(-25%);
+    margin: 0;
+    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
+    border-radius: 0 0.7rem 0.7rem 0;
+    z-index: 3;
+}

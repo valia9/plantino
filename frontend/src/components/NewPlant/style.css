@@ -16,7 +16,8 @@ label {
     sans-serif;
 }
 
-input {
+input,
+button {
     min-width: 12rem;
     min-height: 1.4rem;
     font-size: smaller;
@@ -24,22 +25,28 @@ input {
    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
+
+/* input[type="text"] { 
+    padding: 20px 10px;
+    line-height: 28px; 
+} */
+
 h3 {
     color: #605B56;
+    font-size: 16px;
 }
 
 .form {
     position: absolute;
-    top: 8rem;
+    top: 0;
     background-color: #ECFDD8;
-    max-width: 40vw;
-   text-align: center;
-   padding: 2rem 2rem;
-   left: 50%;
-   transform: translateX(-50%);
-   margin: 0;
-   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-   border-radius: 0.7rem;
+    min-width: 24rem;
+    min-height: 27rem;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 0;
+    border-radius: 0 0.7rem 0.7rem 0;
+    z-index: 3;
 }
 
 .input {
@@ -62,6 +69,10 @@ h3 {
 
 .input:last-of-type {
     margin-top: 2rem;
+}
+
+input::placeholder {
+    font-size: 12px;
 }
 
 .close {

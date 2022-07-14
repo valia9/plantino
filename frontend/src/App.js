@@ -1,12 +1,12 @@
 
 import './App.css';
-import Plant from './components/Plant';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <div className="container">
       <h1>PLANTINO</h1>
-      <Plant />
+      <Menu />
     </div>
   );
 }

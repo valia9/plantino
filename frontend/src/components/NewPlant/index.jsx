@@ -2,30 +2,32 @@ import React, {useState, useEffect} from 'react';
 import './style.css';
 
 import axios from 'axios';
+// import {DateTime} from 'luxon';
 
 const NewPlant = () => {
 
-    useEffect(() => {
-      let today = new Date();
-      let dd = today.getDate();
-      let mm = today.getMonth()+1; //January is 0!
-      let yyyy = today.getFullYear();
+    // specifying 'today' for a future reference
 
-      if(dd<10) {
-          dd = '0'+dd
-      } 
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1; //January is 0!
+    let yyyy = today.getFullYear();
 
-      if(mm<10) {
-          mm = '0'+mm
-      } 
+      if(dd<10) { dd = '0'+dd } 
+
+      if(mm<10) { mm = '0'+mm } 
       
       today = yyyy + '-' + mm + '-' + dd;
+
+    // setting the date while loading the page
+
+    useEffect(() => {
        document.getElementById('lastWatered').value = today;
     });
 
     const [formData, setFormData] = useState({
         name: "",
-        lastWatered: Date(),
+        lastWatered: today,
         daysBtwWatering: 1,
         notes: "",
     })
@@ -38,7 +40,7 @@ const NewPlant = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        const newPlant = await Plant.create({
+        const newPlant =({
             name,
             lastWatered,
             daysBtwWatering,
@@ -53,16 +55,17 @@ const NewPlant = () => {
 
 		try {
 			const body = JSON.stringify(newPlant);
-			await axios.post("/addplant", body, config);
+			await axios.post("addplant", body, config);
 			setFormData({
 				name: "",
-				lastWatered: Date(),
+				lastWatered: today,
 				daysBtwWatering: 1,
 				notes: "",
-			});
-			window.location.reload();
+			})
+            // .then(res => console.log(res));
+			// window.location.reload();
 		} catch (err) {
-			console.error("error", err.response.data);
+			console.error("error", err);
 		}
 	};
     
@@ -77,7 +80,7 @@ return (
            value={name} onChange={(e)=> onChange(e)}/>
 
         <label htmlFor="lastWatered">Last watered:</label>
-        <input type="date" id="lastWatered" name="lastWatered" min="2022-06-01" required
+        <input type="date" id="lastWatered" name="lastWatered" required
         value={lastWatered} onChange={(e)=> onChange(e)}/>
 
         <label htmlFor="daysBtwWatering">Days between watering:</label>

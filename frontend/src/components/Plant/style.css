@@ -1,0 +1,16 @@
+.plant {
+    z-index: 100;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-size: 13px;
+}
+
+.plant__name {
+    color: #7A5FBF;
+}
+
+.plant__nextWatering {
+    font-weight: bolder;
+}

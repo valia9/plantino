@@ -48,6 +48,7 @@ const NewPlant = () => {
 
 		try {
 			const body = JSON.stringify(newPlant);
+            console.log(body)
 			await axios.post("addplant", body, config);
 			setFormData({
 				name: "",

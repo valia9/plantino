@@ -25,6 +25,23 @@ app.get("/mylist", async (req, res) => {
      }
     })
 
+    app.patch("/mylist", async (req, res) => {
+        const id = req.body;
+        const date = new Date();
+        // console.log(date)
+        // console.log(id)
+        try {
+        const plant = await Plant.findOneAndUpdate(
+            { "_id": id } , 
+            { $set: { lastWatered: date } }
+            );
+        await plant.save();
+    } catch (err) {
+        console.log(err);
+        res.status(500).send();
+     }
+    })
+
 app.post("/addplant", async (req, res) => {
 
     const {name, lastWatered, daysBtwWatering, notes} = req.body;
@@ -45,5 +62,6 @@ app.post("/addplant", async (req, res) => {
 		res.json(plant);
 	});
 });
+
 
 app.listen(PORT, console.log(`Server running`));

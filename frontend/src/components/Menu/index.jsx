@@ -3,18 +3,19 @@ import './style.css';
 
 import MyList from '../MyList';
 import NewPlant from '../NewPlant';
+import PlantId from '../PlantId';
 
 const Menu = () => {
 
-    const [isListActive, setListActive] = useState(false);
+    const [isListActive, setListActive] = useState(true);
     const [isNewActive, setNewActive] = useState(false);
-    const [isSettingsActive, setSettingsActive] = useState(false);
+    const [isPlantIdActive, setPlantIdActive] = useState(false);
 
     const handleListClick = (event) => {
         event.stopPropagation();
         setListActive(!isListActive);
         setNewActive(false);
-        setSettingsActive(false);
+        setPlantIdActive(false);
         event.preventDefault();
     }
 
@@ -22,13 +23,13 @@ const Menu = () => {
         event.stopPropagation();
         setNewActive(!isNewActive);
         setListActive(false);
-        setSettingsActive(false);
+        setPlantIdActive(false);
         event.preventDefault();
     }
 
-    const handleSettingsClick = (event) => {
+    const handlePlantIdClick = (event) => {
         event.stopPropagation();
-        setSettingsActive(!isSettingsActive);
+        setPlantIdActive(!isPlantIdActive);
         setNewActive(false);
         setListActive(false);
         event.preventDefault();
@@ -37,6 +38,7 @@ const Menu = () => {
 return (
     <div className='menu'>
         <ul className='navbar'>
+            <li></li>
             <li 
             className={isListActive ? 'active': null}  
             onClick={handleListClick}
@@ -54,11 +56,12 @@ return (
                 {isNewActive && <NewPlant />}
 
             <li 
-            className={isSettingsActive ? 'active': null}  
-            onClick={handleSettingsClick}
+            className={isPlantIdActive ? 'active': null}  
+            onClick={handlePlantIdClick}
             >
-                Settings
+                Plant Identification
             </li>
+                {isPlantIdActive && <PlantId />}
 
         </ul>
     </div>

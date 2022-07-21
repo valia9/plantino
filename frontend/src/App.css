@@ -1,12 +1,8 @@
 .container {
-  /* background-color: #ACC18A; */
-  min-height: 90vh;
-  max-width: 70vw;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  background-image: url('../public/bg.jpg');
+  min-height: 100vh;
+  max-width: 100vw;
   position:static;
-  background-image: linear-gradient(-120deg, #9F9793 0%, #DAFEB7 100%);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -15,14 +11,49 @@ h1 {
   position: relative;
   text-align:right;
   padding-top: 1.5rem;
-  padding-right: 2rem;
-  font-size: 20px;
-  color: white;
+  padding-left: 5rem;
+  font-size: 22px;
   margin-top: 0;
-  float: right;
+  float: left;
+  /* background-image: linear-gradient(-120deg, #ffffff 10%, #A0A7BA 20%, #7B9167 80%);
+  background-clip: text;
+  color: transparent; */
+  color: white;
 }
 
 h1:hover {
   color: #837A75;
 }
 
+.app--button {
+  background-color: #1C4517;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 1.5rem;
+  float: right;
+  box-shadow: none;
+  border: none;
+  min-width: 8rem;
+}
+
+.app--button:first-of-type {
+  margin-right: 5rem;
+}
+
+.app--button:nth-of-type(2) {
+  background-color: white;
+  color: black;
+}
+
+.app--button:hover {
+  background-color: #7B9167;
+  transform: translate(0, -1px);
+}
+
+.app--button:nth-of-type(2):hover {
+  background-color: #d3cdca;
+  transform: translate(0, -1px);
+}

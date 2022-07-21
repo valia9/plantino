@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
 import axios from 'axios';
-// import {DateTime} from 'luxon';
 
 const NewPlant = () => {
 
@@ -18,12 +17,6 @@ const NewPlant = () => {
       if(mm<10) { mm = '0'+mm } 
       
       today = yyyy + '-' + mm + '-' + dd;
-
-    // setting the date while loading the page
-
-    useEffect(() => {
-       document.getElementById('lastWatered').value = today;
-    });
 
     const [formData, setFormData] = useState({
         name: "",
@@ -72,28 +65,30 @@ const NewPlant = () => {
 
 return (
     <div className='form'>
-        <h3>Please, add information about your plant.</h3>
-        <form onSubmit={(e)=>onSubmit(e)}>
-        <label htmlFor="name">Plant's name:</label>
-        <input type="text" id="name" name="name" required
-           minLength="2" maxLength="20" size="12" autoComplete="off" 
-           value={name} onChange={(e)=> onChange(e)}/>
+        <section className='new-plant'>
+            <h3>Please, add information about your plant.</h3>
+            <form onSubmit={(e)=>onSubmit(e)}>
+            <label htmlFor="name">Plant's name:</label>
+            <input type="text" id="name" name="name" required
+            minLength="2" maxLength="20" size="12" autoComplete="off" 
+            value={name} onChange={(e)=> onChange(e)}/>
 
-        <label htmlFor="lastWatered">Last watered:</label>
-        <input type="date" id="lastWatered" name="lastWatered" required
-        value={lastWatered} onChange={(e)=> onChange(e)}/>
+            <label htmlFor="lastWatered">Last watered:</label>
+            <input type="date" id="lastWatered" name="lastWatered" required
+            value={lastWatered} onChange={(e)=> onChange(e)}/>
 
-        <label htmlFor="daysBtwWatering">Days between watering:</label>
-        <input type="number" id="daysBtwWatering" name="daysBtwWatering"
-            min="1" max="60" autoComplete="off" required 
-            value={daysBtwWatering} onChange={(e)=> onChange(e)}/>
+            <label htmlFor="daysBtwWatering">Days between watering:</label>
+            <input type="number" id="daysBtwWatering" name="daysBtwWatering"
+                min="1" max="60" autoComplete="off" required 
+                value={daysBtwWatering} onChange={(e)=> onChange(e)}/>
 
-        <label htmlFor="notes">Notes:</label>
-        <input type="text" id="notes" name="notes" placeholder='Does not like a direct sunlight' required
-        value={notes} onChange={(e)=> onChange(e)}/>
+            <label htmlFor="notes">Notes:</label>
+            <input type="text" id="notes" name="notes" placeholder='Does not like a direct sunlight' required
+            value={notes} onChange={(e)=> onChange(e)}/>
 
-        <button className='input' type='submit'>Add Plant</button> 
-        </form>
+            <button className='submit-btn' type='submit'>Add Plant</button> 
+            </form>
+        </section>
 
     </div>
 )

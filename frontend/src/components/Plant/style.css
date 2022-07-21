@@ -5,12 +5,33 @@
 
 p {
     font-size: 13px;
+    color: #605B56;
 }
 
 .plant__name {
     color: #7A5FBF;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 .plant__nextWatering {
     font-weight: bolder;
+}
+
+.water-btn {
+    color: #3f3c39;
+    border: none;
+    box-shadow: none;
+    background-color: #D0D3DD; 
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1.5rem;
+    min-width: 8rem;
+}
+
+.water-btn:hover {
+    transform: translate(0, -1px);
+    background-color: #e7e9ee; 
 }

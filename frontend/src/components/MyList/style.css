@@ -1,15 +1,19 @@
 .form {
     position: absolute;
-    top: 0;
-    background-color: #ECFDD8;
-    min-width: 22rem;
-    min-height: 23rem;
+    /* background-color: #c1d5af; */
+    max-height: 68vh;
+    width: 37.5vw;
     text-align: center;
     padding: 2rem 2rem;
-    left: 50%;
-    transform: translateX(-25%);
+    left: 27.5%;
     margin: 0;
-    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
     border-radius: 0 0.7rem 0.7rem 0;
     z-index: 3;
+    overflow: scroll;
+    /* background-color: rgba(255, 255, 255, 0.96); */
+}
+
+.my-list {
+    margin: auto;
+    margin-top: 5vh;
 }

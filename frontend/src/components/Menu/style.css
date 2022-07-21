@@ -1,10 +1,11 @@
 .menu {
     position: absolute;
-    background-color: #9F9793;
-    min-width: 34rem;
-    min-height: 27rem;
+    background-color: rgba(178, 197,	146, 0.9);
+    /* opacity: 0.96; */
+    min-width: 50rem;
+    min-height: 72vh;
     text-align: center;
-    padding: 2rem 2rem 2rem 0;
+    padding: 0 2rem 2rem 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0.7rem;
@@ -18,26 +19,32 @@
     text-align: left;
     float: left;
     padding-left: 0;
-    top: 2rem;
+    margin-top: 15vh;
     
   }
   
   li {
+    margin-top: 1rem;
     list-style: none;
-    padding:2rem;
+    padding: 2rem;
     left: 0;
-    color: white;
+    color: #1C4517;
     cursor:pointer;
     font-size: 16px;
+    margin-left: 1rem;
   }
   
+  li:first-of-type {
+    display: none;
+  }
+
   li:hover {
     color: #837A75;
   }
   
   li.active {
-    background-color: #ECFDD8;
-    color: black;
-    padding-right: 6rem;
-    box-shadow:inset 0.3rem 0 0 #837A75;
+    color: #1C4517;
+    box-shadow:inset 0.3rem 0 0 #1C4517;
   }
+
+

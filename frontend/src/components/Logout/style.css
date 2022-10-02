@@ -1,0 +1,31 @@
+.logout {
+    position: absolute;
+    left: 3.5rem;
+    bottom: 1rem;
+    z-index: 1005;
+    height: 5rem;
+    width: 7rem;
+    margin: 0;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+    .logout {
+        top: 0;
+        left: 82%;
+    }
+  }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .logout {
+        left: 2rem;
+        bottom: 6rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .logout {
+        top: 0;
+        left: 2rem;
+        border-radius: 100%;
+    }
+}

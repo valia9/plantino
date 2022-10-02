@@ -1,0 +1,101 @@
+.container--welcome {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(178, 197, 146, 0.7);
+}
+
+.form--welcome {
+  position: absolute;
+    border-radius: 0.7rem;
+    height: 40rem;
+    width: 50%;
+    background-color: white;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.app--button {
+    background-color: #1C4517;
+    color: black;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    font-family: 'oxygen', sans-serif;
+    border-radius: 1.5rem;
+    box-shadow: none;
+    border: none;
+    min-width: 8rem;
+  }
+
+  
+  .app--button:nth-of-type(2) {
+    background-color: #d3cdca;
+    /* color: black; */
+  }
+  
+  .app--button:hover {
+    background-color: #7B9167;
+    transform: translate(0, -1px);
+  }
+  
+  .app--button:nth-of-type(2):hover {
+    background-color: #e5e7e4;
+    transform: translate(0, -1px);
+  }
+
+  .app--button:any-link {
+    color: white;
+  }
+
+ .text--welcome {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 5rem;
+ }
+
+ h2 {
+padding-bottom: 1.5rem;
+color: #1C4517;
+ }
+
+ h3 {
+  margin-top: 1.5rem;
+  color: #1C4517;
+  font-weight:normal;
+  line-height: 150%;
+ }
+
+ .invisible {
+  display: none;
+  visibility: hidden;
+ } 
+
+  .login-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10%;
+  
+  }
+
+  @media only screen and (max-width: 760px) {
+
+    .container--welcome {
+
+      z-index: 999;
+    }
+
+    .form--welcome {
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+

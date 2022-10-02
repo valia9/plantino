@@ -1,0 +1,19 @@
+.span--arrow {
+    left: -15rem;
+    top: 5rem;
+    color: black;
+}
+
+.span--arrow:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .span--arrow {
+    left: -10rem;
+    top: 2rem;
+    color: black;
+    z-index: 1000;
+    }
+  }

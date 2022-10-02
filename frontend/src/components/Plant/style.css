@@ -1,0 +1,72 @@
+.plant {
+    z-index: 100;
+    margin-bottom: 3rem;
+    min-height: 18rem;
+    min-width: 20rem;
+    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
+    /* padding: 1rem 2rem; */
+}
+
+p {
+    font-size: 13px;
+    color: #605B56;
+}
+
+.plant__name {
+    color: #7A5FBF;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.plant__nextWatering {
+    font-weight: bolder;
+}
+
+.water-btn {
+    color: #3f3c39;
+    border: none;
+    box-shadow: none;
+    background-color: #D0D3DD; 
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 700;
+    /* font-size: larger; */
+    border-radius: 1.5rem;
+    min-width: 8rem;
+    font-family: 'oxygen', sans-serif;
+}
+
+.water-btn:hover {
+    transform: translate(0, -1px);
+    background-color: #e7e9ee; 
+}
+
+.expand-more {
+    left: 4rem;
+    position: relative;
+    top: -1rem;
+    color: #3f3c39;
+}
+
+.expand-more:hover {
+    transform: translate(0, -1px);
+}
+
+p.stars {
+    position: relative;
+    top: -2.5rem;
+}
+
+p.stars:first-of-type {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 760px) {
+    .plant {
+        z-index: 100;
+        margin-bottom: 0;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+  }

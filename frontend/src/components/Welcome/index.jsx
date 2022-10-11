@@ -32,6 +32,8 @@ const Welcome = () => {
                 <h3>Plantino is a web application that tracks the watering schedule of your houseplants.</h3>
                 <h3>To proceed with Plantino, you will need an account. Please, create it or use the exisiting one to log in.</h3>
                 <h3>Having an account is neccessary for the user to access their plants list from any device.</h3>
+
+                <h3>Alternatively, you are free to login under the <Link to="/signin" style={{'color': '#1C4517', 'font-weight': 'bold'}}>Demo user</Link> credentials to look around.</h3>
             </div>
                 <div className='login-btns'>
                             <button

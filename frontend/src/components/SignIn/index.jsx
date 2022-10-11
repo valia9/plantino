@@ -83,14 +83,14 @@ const SignIn = () => {
             className='form--login__textbox'
             onSubmit={(e)=>onLoginSubmit(e)}>
 
-                <label htmlFor='username'>Your username:</label>
+                <label htmlFor='username'>Your username: <small>Demo username: demoUser1</small></label>
                 <input type='text' id='username' name='username' required
                 minLength='6' maxLength='20' size='12'  
                 placeholder='JaneDoe86' onChange={(e)=> onChange(e)}
                 value={username} pattern="^[a-zA-Z0-9-_\.]{6,20}$"
                 />  
 
-                <label htmlFor='password'>Password:</label>
+                <label htmlFor='password'>Password: <small>Demo password: demoUser1</small></label>
                 <input type='password' id='password' name='password' required
                 minLength='8' size='20' autoComplete='off'
                 placeholder='********' onChange={(e)=> onChange(e)}
